@@ -1,9 +1,13 @@
 # Josephus problem
 
+相關題目 : [1823. Find the Winner of the Circular Game](../Medium/1823.%20Find%20the%20Winner%20of%20the%20Circular%20Game.md)
+
 Wiki : https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%91%9F%E5%A4%AB%E6%96%AF%E9%97%AE%E9%A2%98
 
 
 影片參考 : https://www.youtube.com/watch?v=Yeh1_2GyS5s
+
+
 N = 人數 ，K = 每幾個人殺一個
 
 通解f(N , K) = f(N - 1 , K) + K (若這個值>N的話，要減掉N)
@@ -86,4 +90,9 @@ int findTheWinner(int n, int k) {
 >![image](https://github.com/KaierTW/LeetCode/assets/106085605/865d3fdd-bb4a-4021-a2a8-3fa21213c052)
 >
 >![image](https://github.com/KaierTW/LeetCode/assets/106085605/c061811e-f9e9-4a6f-a213-4f9063bd15bd)
+>
+>![image](https://github.com/KaierTW/LeetCode/assets/106085605/65d67952-d992-4395-8eab-734b0f8b254e)
+
+
+
 
