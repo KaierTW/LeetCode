@@ -11,3 +11,5 @@ Binary Tree:
 [110. Balanced Binary Tree](110.%20Balanced%20Binary%20Tree.md)
 
 [111. Minimum Depth of Binary Tree](111.%20Minimum%20Depth%20of%20Binary%20Tree)
+
+[112. Path Sum](112.%20Path%20Sum)
