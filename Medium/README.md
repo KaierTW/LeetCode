@@ -5,3 +5,5 @@ Binary Tree:
 [99. Recover Binary Search Tree](99.%20Recover%20Binary%20Search%20Tree.md)
 
 [113. Path Sum II](113.%20Path%20Sum%20II.md)
+
+[114. Flatten Binary Tree to Linked List](114.%20Flatten%20Binary%20Tree%20to%20Linked%20List)
