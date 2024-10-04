@@ -12,3 +12,8 @@
 
 # Binary Search
 [33. Search in Rotated Sorted Array](33.%20Search%20in%20Rotated%20Sorted%20Array.md)
+
+# Divide
+[1497. Check If Array Pairs Are Divisible by k](1497.%20Check%20If%20Array%20Pairs%20Are%20Divisible%20by%20k.md)
+
+[1590. Make Sum Divisible by P](1590.%20Make%20Sum%20Divisible%20by%20P.md)
