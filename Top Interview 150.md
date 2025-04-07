@@ -11,4 +11,6 @@
 
 [169. Majority Element](Easy/169.%20Majority%20Element.md)
 
+[189. Rotate Array](Medium/189.%20Rotate%20Array.md)
+
 [121. Best Time to Buy and Sell Stock](Easy/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
