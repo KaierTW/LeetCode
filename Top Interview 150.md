@@ -18,3 +18,5 @@
 [122. Best Time to Buy and Sell Stock II](Medium/122.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20II.md)
 
 [55. Jump Game](Medium/55.%20Jump%20Game.md)
+
+[45. Jump Game II](Medium/45.%20Jump%20Game%20II.md)
