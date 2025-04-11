@@ -20,3 +20,5 @@
 [55. Jump Game](Medium/55.%20Jump%20Game.md)
 
 [45. Jump Game II](Medium/45.%20Jump%20Game%20II.md)
+
+[274. H-Index](Medium/274.%20H-Index.md)
