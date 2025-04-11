@@ -22,3 +22,5 @@
 [45. Jump Game II](Medium/45.%20Jump%20Game%20II.md)
 
 [274. H-Index](Medium/274.%20H-Index.md)
+
+[380. Insert Delete GetRandom O(1)](Medium/380.%20Insert%20Delete%20GetRandom%20O(1).md)
