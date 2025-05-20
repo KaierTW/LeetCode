@@ -30,3 +30,5 @@
 [134. Gas Station](Medium/134.%20Gas%20Station.md)
 
 [14. Longest Common Prefix](Easy/14.%20Longest%20Common%20Prefix.md)
+
+[28. Find the Index of the First Occurrence in a String](Easy/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String.md)
