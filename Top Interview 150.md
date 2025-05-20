@@ -27,4 +27,6 @@
 
 [238. Product of Array Except Self](Medium/238.%20Product%20of%20Array%20Except%20Self.md)
 
-[134. Gas Station](edium/134.%20Gas%20Station.md)
+[134. Gas Station](Medium/134.%20Gas%20Station.md)
+
+[14. Longest Common Prefix](Easy/14.%20Longest%20Common%20Prefix.md)
