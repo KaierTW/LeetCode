@@ -35,3 +35,5 @@
 
 ## [Two Pointers]
 [125. Valid Palindrome](Easy/125.%20Valid%20Palindrome.md)
+
+[392. Is Subsequence.md](Easy/392.%20Is%20Subsequence.md)
