@@ -37,3 +37,5 @@
 [125. Valid Palindrome](Easy/125.%20Valid%20Palindrome.md)
 
 [392. Is Subsequence.md](Easy/392.%20Is%20Subsequence.md)
+
+[167. Two Sum II - Input Array Is Sorted.md](Medium/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.md)
