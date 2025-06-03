@@ -29,17 +29,37 @@
 
 [134. Gas Station](Medium/134.%20Gas%20Station.md)
 
+[Candy]
+
+[Trapping Rain Water]
+
+[13. Roman to Integer](Easy/13.%20Roman%20to%20Integer.md)
+
+[12. Integer to Roman](Medium/12.%20Integer%20to%20Roman.md)
+
+[58. Length of Last Word](Easy/58.%20Length%20of%20Last%20Word.md)
+
 [14. Longest Common Prefix](Easy/14.%20Longest%20Common%20Prefix.md)
 
+[151. Reverse Words in a String](Medium/151.%20Reverse%20Words%20in%20a%20String.md)
+
+[6. Zigzag Conversion](Medium/6.%20Zigzag%20Conversion.md)
+
 [28. Find the Index of the First Occurrence in a String](Easy/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String.md)
+
+[Text Justification]
 
 ## [Two Pointers]
 [125. Valid Palindrome](Easy/125.%20Valid%20Palindrome.md)
 
-[392. Is Subsequence.md](Easy/392.%20Is%20Subsequence.md)
+[392. Is Subsequence](Easy/392.%20Is%20Subsequence.md)
 
-[167. Two Sum II - Input Array Is Sorted.md](Medium/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.md)
+[167. Two Sum II - Input Array Is Sorted](Medium/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.md)
 
-[11. Container With Most Water.md](Medium/11.%20Container%20With%20Most%20Water.md)
+[11. Container With Most Water](Medium/11.%20Container%20With%20Most%20Water.md)
 
-[15. 3Sum.md](Medium/15.%203Sum.md)
+[15. 3Sum](Medium/15.%203Sum.md)
+
+## [Sliding Window]
+[209. Minimum Size Subarray Sum](Medium/209.%20Minimum%20Size%20Subarray%20Sum.md)
+
