@@ -64,3 +64,10 @@
 [209. Minimum Size Subarray Sum](Medium/209.%20Minimum%20Size%20Subarray%20Sum.md)
 
 [3.  Longest Substring Without Repeating Characters](Medium/3.%20Longest%20Substring%20Without%20Repeating%20Characters.md)
+
+[30. Substring with Concatenation of All Words]
+
+[76. Minimum Window Substring]
+
+## [Matrix]
+[36. Valid Sudoku](Medium/36.%20Valid%20Sudoku.md)
