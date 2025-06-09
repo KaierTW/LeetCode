@@ -71,3 +71,9 @@
 
 ## [Matrix]
 [36. Valid Sudoku](Medium/36.%20Valid%20Sudoku.md)
+
+[54. Spiral Matrix](Medium/54.%20Spiral%20Matrix.md)
+
+[48. Rotate Image](Medium/48.%20Rotate%20Image.md)
+
+[73. Set Matrix Zeroes.md](Medium/73.%20Set%20Matrix%20Zeroes.md)
