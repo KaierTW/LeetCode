@@ -79,3 +79,7 @@
 [73. Set Matrix Zeroes](Medium/73.%20Set%20Matrix%20Zeroes.md)
 
 [289. Game of Life](Medium/289.%20Game%20of%20Life.md)
+
+
+## [HashMap]
+[383. Ransom Note](Easy/383.%20Ransom%20Note.md)
