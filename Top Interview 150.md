@@ -83,3 +83,5 @@
 
 ## [HashMap]
 [383. Ransom Note](Easy/383.%20Ransom%20Note.md)
+
+[205. Isomorphic Strings](Easy/205.%20Isomorphic%20Strings.md)
