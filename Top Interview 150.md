@@ -89,3 +89,7 @@
 [290. Word Pattern](Easy/290.%20Word%20Pattern.md)
 
 [242. Valid Anagram](Easy/242.%20Valid%20Anagram.md)
+
+
+
+[1. Two Sum](Easy/1.%20Two%20Sum.md)
