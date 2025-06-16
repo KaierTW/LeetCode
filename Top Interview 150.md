@@ -87,3 +87,5 @@
 [205. Isomorphic Strings](Easy/205.%20Isomorphic%20Strings.md)
 
 [290. Word Pattern](Easy/290.%20Word%20Pattern.md)
+
+[242. Valid Anagram](Easy/242.%20Valid%20Anagram.md)
