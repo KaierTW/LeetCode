@@ -95,3 +95,5 @@
 [1. Two Sum](Easy/1.%20Two%20Sum.md)
 
 [202. Happy Number](Easy/202.%20Happy%20Number.md)
+
+[219. Contains Duplicate II](Easy/219.%20Contains%20Duplicate%20II.md)
