@@ -103,3 +103,5 @@
 
 ## [Intervals]
 [228. Summary Ranges](Easy/228.%20Summary%20Ranges.md)
+
+[56. Merge Intervals](Medium/56.%20Merge%20Intervals.md)
