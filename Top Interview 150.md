@@ -97,3 +97,5 @@
 [202. Happy Number](Easy/202.%20Happy%20Number.md)
 
 [219. Contains Duplicate II](Easy/219.%20Contains%20Duplicate%20II.md)
+
+[128. Longest Consecutive Sequence](Medium/128.%20Longest%20Consecutive%20Sequence.md)
