@@ -49,6 +49,8 @@
 
 [Text Justification]
 
+---
+
 ## [Two Pointers]
 [125. Valid Palindrome](Easy/125.%20Valid%20Palindrome.md)
 
@@ -60,6 +62,8 @@
 
 [15. 3Sum](Medium/15.%203Sum.md)
 
+---
+
 ## [Sliding Window]
 [209. Minimum Size Subarray Sum](Medium/209.%20Minimum%20Size%20Subarray%20Sum.md)
 
@@ -68,6 +72,8 @@
 [30. Substring with Concatenation of All Words]
 
 [76. Minimum Window Substring]
+
+---
 
 ## [Matrix]
 [36. Valid Sudoku](Medium/36.%20Valid%20Sudoku.md)
@@ -80,6 +86,7 @@
 
 [289. Game of Life](Medium/289.%20Game%20of%20Life.md)
 
+---
 
 ## [HashMap]
 [383. Ransom Note](Easy/383.%20Ransom%20Note.md)
@@ -100,6 +107,7 @@
 
 [128. Longest Consecutive Sequence](Medium/128.%20Longest%20Consecutive%20Sequence.md)
 
+---
 
 ## [Intervals]
 [228. Summary Ranges](Easy/228.%20Summary%20Ranges.md)
@@ -109,3 +117,8 @@
 [57. Insert Interval](Medium/57.%20Insert%20Interval.md)
 
 [452. Minimum Number of Arrows to Burst Balloons](Medium/452.%20Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons.md)
+
+---
+
+## [Stack]
+[20. Valid Parentheses](Easy/20.%20Valid%20Parentheses.md)
