@@ -122,3 +122,5 @@
 
 ## [Stack]
 [20. Valid Parentheses](Easy/20.%20Valid%20Parentheses.md)
+
+[71. Simplify Path](Medium/71.%20Simplify%20Path.md)
