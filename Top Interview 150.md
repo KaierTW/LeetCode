@@ -130,3 +130,8 @@
 [150. Evaluate Reverse Polish Notation](Medium/150.%20Evaluate%20Reverse%20Polish%20Notation.md)
 
 [224. Basic Calculator]
+
+---
+
+## [Linked List]
+[141. Linked List Cycle](Easy/141.%20Linked%20List%20Cycle.md)
