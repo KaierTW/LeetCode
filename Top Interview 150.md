@@ -29,9 +29,9 @@
 
 [134. Gas Station](Medium/134.%20Gas%20Station.md)
 
-[Candy]
+[135. Candy]
 
-[Trapping Rain Water]
+[42. Trapping Rain Water]
 
 [13. Roman to Integer](Easy/13.%20Roman%20to%20Integer.md)
 
@@ -47,7 +47,7 @@
 
 [28. Find the Index of the First Occurrence in a String](Easy/28.%20Find%20the%20Index%20of%20the%20First%20Occurrence%20in%20a%20String.md)
 
-[Text Justification]
+[68. Text Justification]
 
 ---
 
@@ -128,3 +128,5 @@
 [155. Min Stack](Medium/155.%20Min%20Stack.md)
 
 [150. Evaluate Reverse Polish Notation](Medium/150.%20Evaluate%20Reverse%20Polish%20Notation.md)
+
+[224. Basic Calculator]
