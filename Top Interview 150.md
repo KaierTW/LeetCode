@@ -126,3 +126,5 @@
 [71. Simplify Path](Medium/71.%20Simplify%20Path.md)
 
 [155. Min Stack](Medium/155.%20Min%20Stack.md)
+
+[150. Evaluate Reverse Polish Notation](Medium/150.%20Evaluate%20Reverse%20Polish%20Notation.md)
