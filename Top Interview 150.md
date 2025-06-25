@@ -124,3 +124,5 @@
 [20. Valid Parentheses](Easy/20.%20Valid%20Parentheses.md)
 
 [71. Simplify Path](Medium/71.%20Simplify%20Path.md)
+
+[155. Min Stack](Medium/155.%20Min%20Stack.md)
