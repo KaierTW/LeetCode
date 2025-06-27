@@ -100,4 +100,331 @@ System Call (e.g., read)
 
 ---
 
+# Programming Related
+
+## 函數寫法差異
+bool x = a();
+bool y = b();
+if(x || y) {
+
+}
+if(a() || b()) {
+
+}
+這兩種寫法在**語意上是不同的**，主要差異在於：
+**是否會重複呼叫 `a()` 和 `b()` 函式，以及呼叫的時機。**
+
+---
+
+### 🔹 寫法一：
+
+```cpp
+bool x = a();
+bool y = b();
+if(x || y) {
+
+}
+```
+
+#### ✅ 特點：
+
+* `a()` 與 `b()` 都**會被呼叫一次**，不論 `a()` 回傳的是 `true` 還是 `false`。
+* 結果儲存在變數 `x` 和 `y` 中。
+* `if` 判斷的是已經算好的結果，不再呼叫函式。
+
+---
+
+### 🔹 寫法二：
+
+```cpp
+if(a() || b()) {
+
+}
+```
+
+#### ✅ 特點：
+
+* `a()` 與 `b()` 是**即時運算**。
+* 使用 **短路運算（short-circuit evaluation）**：
+
+  * 如果 `a()` 回傳 `true`，則 `b()` **不會被呼叫**，因為 `x || y` 已經成立。
+  * 只有在 `a()` 回傳 `false` 的情況下，才會執行 `b()`。
+
+---
+
+### ✅ 比較總結：
+
+| 項目 | 寫法一 `x = a(); y = b();`   | 寫法二 `if(a() \|\| b())` |
+|------|-------------|--------------------|
+| 是否都會呼叫 `a()` 與 `b()`   | ✅ 一定會     | ❌ 不一定會（看 `a()` 結果）   |
+| 是否有短路效果                | ❌ 沒有                        | ✅ 有                          |
+| 是否重複呼叫函式              | ❌ 不會                        | ✅ 每次 if 判斷都會再呼叫一次    |
+| 是否能重複使用結果變數         | ✅ 可以使用 `x`、`y` 重複使用   | ❌ 不能（除非你額外存起來）      |
+
+---
+
+### 🔸 什麼時候該用哪個？
+
+* 若 `a()` 或 `b()` 有副作用（像是輸出、計數、改變狀態），**需注意呼叫次數差異**。
+* 如果你不想 `b()` 被呼叫（除非必要），用第二種。
+* 如果你要重複用 `a()`、`b()` 的結果，用第一種（存成變數）。
+
+---
+
+## 十六進位
+這是一個 C/C++ 中的\*\*指標與型別轉換（type casting / aliasing）\*\*問題，牽涉到記憶體、資料表示與型別解釋。
+
+我們逐步解析你的問題：
+
+---
+
+
+### 🔸 原始程式碼：
+
+```cpp
+unsigned int N = 0xaabbccdd;
+unsigned char* M;
+M = (unsigned char*)&N;
+```
+
+### 🔹 問題：`*M` 是什麼？
+
+---
+
+### ✅ 解釋：
+
+```cpp
+unsigned int N = 0xaabbccdd;
+```
+
+這表示 `N` 是一個 32-bit 整數，值為 16 進位的 `0xAABBCCDD`，也就是：
+
+```
+0xAA 0xBB 0xCC 0xDD
+```
+
+但記住，這是用 **十六進位** 表示一個 `unsigned int` 整數。實際上它會被存在記憶體的 4 個位元組中。
+
+---
+
+### 🔸 重要：記憶體儲存順序（Endian）
+
+這邊會根據電腦架構是 **little-endian** 還是 **big-endian** 而有所不同。
+
+#### ✅ 大部分現代 PC（例如 x86/x64 架構）是 **Little Endian**：
+
+* 在 Little Endian 中，最低位的 byte（0xDD）會放在最前面（低位址）。
+* 記憶體排列如下（假設從位址 `M` 開始）：
+
+```
+M[0] = 0xDD
+M[1] = 0xCC
+M[2] = 0xBB
+M[3] = 0xAA
+```
+
+---
+
+### ✅ 所以 `*M` 是什麼？
+
+```cpp
+*M == M[0] == 第一個位元組 == 0xDD
+```
+
+### 🔚 結論：
+
+* **在 Little Endian 系統中（如 x86/x64）**，`*M` 的值是 `0xDD`。
+* 若是 **Big Endian 系統**，則 `*M` 會是 `0xAA`。
+
+---
+
+### 補充說明
+
+這類問題常出現在以下情況：
+
+* 二進位資料解析（例如：網路封包、影像格式解析）
+* 不同位元型別間的指標轉換
+* 記憶體對齊與效能問題
+
+---
+
+## 給一個linked list header找出linked list 1/3 node的地方（if list is 3的倍數）
+
+這題其實是在考你如何 **找出一個 linked list 中第 1/3 處的節點**，條件是：
+
+> 如果 linked list 的長度是「3 的倍數」，請找出第 **1/3 處** 的節點（也就是第 n/3 個節點）。
+
+---
+
+### ✅ 問題重點翻譯
+
+假設你的 linked list 有 `n` 個節點：
+
+* 如果 `n` 是 3 的倍數（例如：3、6、9...），那你要找的是第 `n / 3` 個節點（從第 1 個開始算）。
+* 如果 `n` 不是 3 的倍數，就**不做任何事**或回傳 null（視題目需求而定）。
+
+---
+
+### 🔍 舉例說明
+
+* linked list: `1 -> 2 -> 3 -> 4 -> 5 -> 6`
+* 總長度：6，是 3 的倍數 → 找第 `6 / 3 = 2` 個節點
+* 所以回傳節點 `2`（也就是值為 `2` 的節點）
+
+---
+
+### 🔧 實作思路
+
+因為你不知道 list 有多長，所以可以先：
+
+1. 走一次計算長度 `n`
+2. 如果 `n % 3 != 0` → 回傳 `nullptr`
+3. 否則再走一次，到第 `n / 3` 個節點
+
+---
+
+### ✅ 範例 C++ 程式碼
+
+假設節點結構如下：
+
+```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+};
+```
+
+找 1/3 節點的函式：
+
+```cpp
+ListNode* oneThirdNode(ListNode* head) {
+    if (!head) return nullptr;
+
+    // 第一次：計算長度
+    int length = 0;
+    ListNode* curr = head;
+    while (curr) {
+        length++;
+        curr = curr->next;
+    }
+
+    // 不是 3 的倍數就不處理
+    if (length % 3 != 0) return nullptr;
+
+    // 第二次：走到第 length / 3 個節點
+    int targetIndex = length / 3; // 第幾個節點（從 1 開始）
+    curr = head;
+    for (int i = 1; i < targetIndex; ++i) {
+        curr = curr->next;
+    }
+
+    return curr;
+}
+```
+
+---
+
+### 🧠 面試常見 follow-up：
+
+* 如果只能走一次 list 怎麼辦？（Hint: 用 slow 指標走 1 步，fast 每次走 3 步）
+* 如果要找 1/2（中間）、1/4、2/3 呢？
+* 若是循環 linked list？
+
+---
+
+這是一個經典的面試 follow-up 問題：
+👉 **「如何只走一遍 linked list，就找出第 1/3 節點（如果長度是 3 的倍數）」**
+
+---
+
+## ✅ 解法：用三倍速的技巧（fast pointer）
+
+### 🎯 核心想法：
+
+* 用兩個指標：`slow` 和 `fast`
+* `fast` 每次走 **3 步**
+* `slow` 每次走 **1 步**
+
+這樣當 `fast` 走到結尾時，`slow` 就剛好走了 **1/3 的距離**
+
+---
+
+### 🧠 為什麼？
+
+假設 list 長度是 `n = 3k`
+
+* `fast` 每次走 3 步 → 走完需要 k 次
+* `slow` 每次走 1 步 → 剛好走了 k 步 → 就是第 `n / 3` 個節點！
+
+---
+
+## ✅ 單遍實作 C++ 範例：
+
+```cpp
+struct ListNode {
+    int val;
+    ListNode* next;
+};
+
+ListNode* oneThirdNode(ListNode* head) {
+    if (!head || !head->next || !head->next->next) return nullptr;
+
+    ListNode* slow = head;
+    ListNode* fast = head;
+
+    while (fast && fast->next && fast->next->next) {
+        slow = slow->next;
+        fast = fast->next->next->next;
+    }
+
+    // 檢查是否剛好是 3 的倍數
+    // fast == nullptr 表示走到底剛剛好
+    if (fast == nullptr)
+        return slow;
+    else
+        return nullptr;
+}
+```
+
+---
+
+## 🧪 範例：
+
+### Input:
+
+```
+1 -> 2 -> 3 -> 4 -> 5 -> 6
+```
+
+* `slow`: 最後停在 `2`
+* `fast`: 走到 `nullptr`
+* 長度為 6（是 3 的倍數）✅ → 回傳 `2`
+
+---
+
+## 🚫 非 3 的倍數情況：
+
+如果 list 是：
+
+```
+1 -> 2 -> 3 -> 4 -> 5
+```
+
+* `fast` 最後剩一兩格 → 表示不是 3 的倍數 → 回傳 `nullptr`
+
+---
+
+## ✅ 總結：
+
+| 技巧        | 說明                  |
+| --------- | ------------------- |
+| 兩個指標      | `slow` 一步、`fast` 三步 |
+| fast 到尾時  | slow 剛好在 1/3 處      |
+| 只走一遍 list | 時間 O(n)，空間 O(1)     |
+
+---
+
+要不要我也幫你轉成 Python、Java 版？或者加上單元測試範例？
+
+
 
