@@ -137,3 +137,5 @@
 [141. Linked List Cycle](Easy/141.%20Linked%20List%20Cycle.md)
 
 [2. Add Two Numbers](Medium/2.%20Add%20Two%20Numbers.md)
+
+[21. Merge Two Sorted Lists](Easy/21.%20Merge%20Two%20Sorted%20Lists.md)
