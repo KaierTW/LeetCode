@@ -139,3 +139,12 @@
 [2. Add Two Numbers](Medium/2.%20Add%20Two%20Numbers.md)
 
 [21. Merge Two Sorted Lists](Easy/21.%20Merge%20Two%20Sorted%20Lists.md)
+
+
+
+---
+
+## [Binary Search Tree]
+[104. Maximum Depth of Binary Tree](Easy/104.%20Maximum%20Depth%20of%20Binary%20Tree.md)
+
+[100. Same Tree](Easy/100.%20Same%20Tree.md)
