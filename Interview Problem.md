@@ -428,3 +428,126 @@ ListNode* oneThirdNode(ListNode* head) {
 
 
 
+## Binary Search Tree (BST)
+當然可以！以下是 Binary Search Tree (BST) 的三大函式：search、insert 和 delete 的完整 C++ 範例，包括結構定義與基本操作。
+
+---
+
+✅ 範例：BST 實作 (C++)
+
+```CPP
+#include <iostream>
+using namespace std;
+
+// 節點定義
+struct TreeNode {
+   int val;
+   TreeNode* left;
+   TreeNode* right;
+
+   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+// 1. Insert 函式
+TreeNode* insert(TreeNode* root, int key) {
+   if (root == nullptr) return new TreeNode(key);
+
+   if (key < root->val)
+       root->left = insert(root->left, key);
+   else if (key > root->val)
+       root->right = insert(root->right, key);
+
+   return root;
+}
+
+// 2. Search 函式
+TreeNode* search(TreeNode* root, int key) {
+   if (root == nullptr || root->val == key) return root;
+
+   if (key < root->val)
+       return search(root->left, key);
+   else
+       return search(root->right, key);
+}
+
+// 3. Delete 函式
+TreeNode* findMin(TreeNode* root) {
+   while (root && root->left) root = root->left;
+   return root;
+}
+
+TreeNode* deleteNode(TreeNode* root, int key) {
+   if (!root) return nullptr;
+
+   if (key < root->val)
+       root->left = deleteNode(root->left, key);
+   else if (key > root->val)
+       root->right = deleteNode(root->right, key);
+   else {
+       // 找到了要刪的節點
+       if (!root->left) {
+           TreeNode* temp = root->right;
+           delete root;
+           return temp;
+       }
+       else if (!root->right) {
+           TreeNode* temp = root->left;
+           delete root;
+           return temp;
+       }
+       // 有兩個子節點：找右子樹的最小值來取代
+       TreeNode* temp = findMin(root->right);
+       root->val = temp->val;
+       root->right = deleteNode(root->right, temp->val);
+   }
+
+   return root;
+}
+
+// 輔助：中序遍歷印出 BST
+void inorder(TreeNode* root) {
+   if (!root) return;
+   inorder(root->left);
+   cout << root->val << " ";
+   inorder(root->right);
+}
+
+// 測試用 main()
+int main() {
+   TreeNode* root = nullptr;
+   root = insert(root, 50);
+   insert(root, 30);
+   insert(root, 70);
+   insert(root, 20);
+   insert(root, 40);
+   insert(root, 60);
+   insert(root, 80);
+
+   cout << "Inorder traversal: ";
+   inorder(root);
+   cout << endl;
+
+   // Search 範例
+   TreeNode* found = search(root, 60);
+   if (found) cout << "Found node: " << found->val << endl;
+   else cout << "Node not found." << endl;
+
+   // Delete 範例
+   root = deleteNode(root, 70);
+   cout << "After deleting 70: ";
+   inorder(root);
+   cout << endl;
+
+   return 0;
+}
+```
+
+---
+
+✅ 你要注意的點：
+
+|函式 | 要點|
+|----|----|
+|insert| 遞迴建立左或右子樹|
+|search| 找不到就 return nullptr|
+|delete| 要處理三種情況：1. 沒子節點（直接刪）2. 一個子節點（接上去）3. 兩個子節點（找右子樹最小值來取代）|
