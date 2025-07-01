@@ -148,3 +148,5 @@
 [104. Maximum Depth of Binary Tree](Easy/104.%20Maximum%20Depth%20of%20Binary%20Tree.md)
 
 [100. Same Tree](Easy/100.%20Same%20Tree.md)
+
+[226. Invert Binary Tree](Easy/226.%20Invert%20Binary%20Tree.md)
