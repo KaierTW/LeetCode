@@ -150,3 +150,5 @@
 [100. Same Tree](Easy/100.%20Same%20Tree.md)
 
 [226. Invert Binary Tree](Easy/226.%20Invert%20Binary%20Tree.md)
+
+[101. Symmetric Tree](Easy/101.%20Symmetric%20Tree.md)
