@@ -13,3 +13,5 @@ Binary Tree:
 [111. Minimum Depth of Binary Tree](111.%20Minimum%20Depth%20of%20Binary%20Tree.md)
 
 [112. Path Sum](112.%20Path%20Sum.md)
+
+[226. Invert Binary Tree](226.%20Invert%20Binary%20Tree.md)
