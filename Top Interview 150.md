@@ -140,6 +140,7 @@
 
 [21. Merge Two Sorted Lists](Easy/21.%20Merge%20Two%20Sorted%20Lists.md)
 
+[138. Copy List with Random Pointer](Medium/138.%20Copy%20List%20with%20Random%20Pointer.md)
 
 
 ---
