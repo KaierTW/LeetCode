@@ -142,6 +142,11 @@
 
 [138. Copy List with Random Pointer](Medium/138.%20Copy%20List%20with%20Random%20Pointer.md)
 
+[92. Reverse Linked List II](Medium/92.%20Reverse%20Linked%20List%20II.md)
+
+[25. Reverse Nodes in k-Group]
+
+[19. Remove Nth Node From End of List](Medium/19.%20Remove%20Nth%20Node%20From%20End%20of%20List.md)
 
 ---
 
