@@ -150,6 +150,8 @@
 
 [82. Remove Duplicates from Sorted List II](Medium/82.%20Remove%20Duplicates%20from%20Sorted%20List%20II.md)
 
+[61. Rotate List](Medium/61.%20Rotate%20List.md)
+
 ---
 
 ## [Binary Search Tree]
