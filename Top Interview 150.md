@@ -152,6 +152,8 @@
 
 [61. Rotate List](Medium/61.%20Rotate%20List.md)
 
+[86. Partition List](Medium/86.%20Partition%20List.md)
+
 ---
 
 ## [Binary Search Tree]
