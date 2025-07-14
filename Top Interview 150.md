@@ -164,3 +164,6 @@
 [226. Invert Binary Tree](Easy/226.%20Invert%20Binary%20Tree.md)
 
 [101. Symmetric Tree](Easy/101.%20Symmetric%20Tree.md)
+
+
+[112. Path Sum](Easy/112.%20Path%20Sum.md)
