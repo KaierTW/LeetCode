@@ -167,5 +167,6 @@
 
 [101. Symmetric Tree](Easy/101.%20Symmetric%20Tree.md)
 
+[105. Construct Binary Tree from Preorder and Inorder Traversal](Medium/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal.md)
 
 [112. Path Sum](Easy/112.%20Path%20Sum.md)
