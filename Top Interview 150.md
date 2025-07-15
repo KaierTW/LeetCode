@@ -154,6 +154,8 @@
 
 [86. Partition List](Medium/86.%20Partition%20List.md)
 
+[146. LRU Cache](Medium/146.%20LRU%20Cache.md)
+
 ---
 
 ## [Binary Search Tree]
