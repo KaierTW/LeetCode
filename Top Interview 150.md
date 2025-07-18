@@ -169,4 +169,6 @@
 
 [105. Construct Binary Tree from Preorder and Inorder Traversal](Medium/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal.md)
 
+[106. Construct Binary Tree from Inorder and Postorder Traversal](Medium/106.%20Construct%20Binary%20Tree%20from%20Inorder%20and%20Postorder%20Traversal.md)
+
 [112. Path Sum](Easy/112.%20Path%20Sum.md)
