@@ -176,3 +176,7 @@
 [114. Flatten Binary Tree to Linked List](Medium/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List.md)
 
 [112. Path Sum](Easy/112.%20Path%20Sum.md)
+
+[129. Sum Root to Leaf Numbers](Medium/129.%20Sum%20Root%20to%20Leaf%20Numbers.md)
+
+[124. Binary Tree Maximum Path Sum]
