@@ -182,3 +182,5 @@
 [124. Binary Tree Maximum Path Sum]
 
 [173. Binary Search Tree Iterator](Medium/173.%20Binary%20Search%20Tree%20Iterator.md)
+
+[222. Count Complete Tree Nodes](Easy/222.%20Count%20Complete%20Tree%20Nodes.md)
