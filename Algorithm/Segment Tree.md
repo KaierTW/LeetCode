@@ -462,3 +462,98 @@ tree[1]  => [0,n-1]         ← root
 ---
 
 如果你想要我畫圖表示 segment tree 運作流程，或是用其他語言（例如 Python），都可以再跟我說～
+
+
+---
+
+## 🌲 二、Segment Tree 原理與實作整理
+
+### ❓Segment Tree 是什麼？
+
+* 一種二元樹結構，用來快速查詢陣列中區間資訊（如最大值、最小值、總和等）
+* 支援：
+
+  * **區間查詢 (range query)：O(log n)**
+  * **單點更新 (point update)：O(log n)**
+
+---
+
+### 🧱 資料結構設計
+
+#### 用 vector 儲存：`vector<int> tree(4 * n)`
+
+* 為什麼 4 \* n？
+
+  * 為了保證空間充足，不會越界。實際只需約 2n 空間，但保守抓 4n。
+
+---
+
+### 🛠 Build 操作（建立樹）
+
+```cpp
+void build(int node, int l, int r) {
+    if (l == r) {
+        tree[node] = A[l];
+    } else {
+        int mid = (l + r) / 2;
+        build(2 * node, l, mid);
+        build(2 * node + 1, mid + 1, r);
+        tree[node] = min(tree[2 * node], tree[2 * node + 1]);
+    }
+}
+```
+
+* 遞迴方式建立，類似二元樹 DFS。
+* `tree[node]` 存的是區間 `l~r` 中的最小值（或其他你定義的聚合值）。
+
+---
+
+### 🔍 Query 操作（查詢區間最小值）
+
+```cpp
+int query(int node, int l, int r, int ql, int qr) {
+    if (qr < l || ql > r) return INF; // 完全不重疊
+    if (ql <= l && r <= qr) return tree[node]; // 完全包含
+    int mid = (l + r) / 2;
+    return min(query(2 * node, l, mid, ql, qr),
+               query(2 * node + 1, mid + 1, r, ql, qr));
+}
+```
+
+* 根據區間重疊情況進行查詢。
+
+---
+
+### ✏️ Update 操作（更新單一元素）
+
+```cpp
+void update(int node, int l, int r, int idx, int value) {
+    if (l == r) {
+        tree[node] = value;
+    } else {
+        int mid = (l + r) / 2;
+        if (idx <= mid)
+            update(node * 2, l, mid, idx, value);
+        else
+            update(node * 2 + 1, mid + 1, r, idx, value);
+        tree[node] = min(tree[node * 2], tree[node * 2 + 1]);
+    }
+}
+```
+
+* 沿著對應 index 的路徑往上更新節點資訊。
+
+---
+
+### ✅ Segment Tree 適合情境
+
+| 操作需求             | 是否適用 Segment Tree     |
+| ---------------- | --------------------- |
+| 區間總和 / 最小值 / 最大值 | ✅                     |
+| 區間加值 / 區間修改      | ✅（需 lazy propagation） |
+| 快速查詢、頻繁更新        | ✅                     |
+| 靜態一次性查詢          | ❌（用 prefix sum 會更快）   |
+
+---
+
+需要我幫你把程式碼整理成完整解法＋注釋版也可以告訴我！
